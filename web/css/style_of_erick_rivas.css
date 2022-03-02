@@ -1,0 +1,21 @@
+
+input#login {
+    color: red;
+  }
+
+input#password{
+  color: aquamarine;
+  background-color: rgb(218, 213, 87);
+}
+
+.layout-2-col__container {
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout-2-col__text {
+  font-size: 22px;
+}
+
