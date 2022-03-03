@@ -7,12 +7,7 @@
         {{ display.pluginPanel('main-top', plugin_main_top) }}
     {% endif %}
     <div class="row">
-        <div class="col-md-9 col-md-push-3 w-100 bg-success pb-4">
-            <div class="layout-2-col__container">
-                <div class="layout-2-col__text">
-                    Hola Fragote
-                </div>
-            </div>
+        <div class="col-md-9 col-md-push-3 w-100 pb-4 layout__rigth">
             <div class="page-content">
                 {% if plugin_content_top %}
                     <div class="page-content-top">
@@ -73,7 +68,7 @@
                 {% endif %}
             </div>
         </div>
-        <div class="col-md-3 col-md-pull-9">
+        <div class="col-md-3 col-md-pull-9 layout__left">
             <div class="sidebar">
                 {% if plugin_menu_top %}
                     {{ display.pluginSidebar('sidebar-top', plugin_menu_top) }}

@@ -2,7 +2,7 @@
 {% if _u.logged  == 0 %}
     {% if login_form %}
         <div id="login-block" class="panel panel-default">
-            <div class="panel-body bg-danger">
+            <div class="panel-body">
             {{ login_language_form }}
             {% if plugin_login_top is not null %}
                 <div id="plugin_login_top">

@@ -658,7 +658,6 @@ class Template
         global $disable_js_and_css_files;
         // Base CSS
         $css[] = api_get_cdn_path(api_get_path(WEB_CSS_PATH).'base.css');
-        $css[] = api_get_cdn_path(api_get_path(WEB_CSS_PATH).'style_of_erick_rivas.css');
 
         if ($this->show_learnpath) {
             $css[] = api_get_cdn_path(api_get_path(WEB_CSS_PATH).'scorm.css');
@@ -676,6 +675,7 @@ class Template
         }
 
         $css[] = api_get_cdn_path(api_get_path(WEB_CSS_PATH).$this->themeDir.'default.css');
+        $css[] = api_get_cdn_path(api_get_path(WEB_CSS_PATH).'style_of_erick_rivas.css');
         $css[] = api_get_cdn_path(ChamiloApi::getEditorBlockStylePath());
 
         $css_file_to_string = null;
@@ -810,6 +810,9 @@ class Template
         foreach ($bowerJsFiles as $file) {
             $js_file_to_string .= '<script src="'.api_get_cdn_path(api_get_path(WEB_PUBLIC_PATH).'assets/'.$file).'"></script>'."\n";
         }
+
+        $js_file_to_string .= '<script src="'.api_get_path(WEB_PUBLIC_PATH).'css/js_of_erick_rivas.js"></script>';
+
 
         foreach ($js_files as $file) {
             $js_file_to_string .= api_get_js($file);
@@ -1177,9 +1180,9 @@ class Template
             'id' => 'login',
             'autofocus' => 'autofocus',
             'icon' => 'user fa-fw',
-            'placeholder' => get_lang('UserName'),
-            'class' => "bg-success",
-            'style' => "background:#b3dfc5"
+            'placeholder' => '',
+            // 'placeholder' => get_lang('UserName'),
+            'class' => "bg-success input--fragote",
         ];
         $browserAutoCapitalize = false;
         // Avoid showing the autocapitalize option if the browser doesn't
@@ -1197,7 +1200,8 @@ class Template
         $params = [
             'id' => 'password',
             'icon' => 'lock fa-fw',
-            'placeholder' => get_lang('Pass'),
+            'placeholder' => '',
+            'class' => 'input--fragote'
         ];
         if ($browserAutoCapitalize) {
             $params['autocapitalize'] = 'none';
@@ -1261,7 +1265,7 @@ class Template
             null,
             'primary',
             null,
-            'btn-block'
+            'btn-block btn--fragote btn-primary--fragote'
         );
 
         $html = $form->returnForm();
