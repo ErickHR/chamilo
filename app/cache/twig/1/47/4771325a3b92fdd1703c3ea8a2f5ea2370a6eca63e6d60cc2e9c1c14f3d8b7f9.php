@@ -11,8 +11,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* default/layout/topbar.tpl */
-class __TwigTemplate_c2787552fe7a983a5200d0473632787bcd02ed6d2393091c2078ca2d1d5bc121 extends \Twig\Template
+/* overrides/layout/topbar.tpl */
+class __TwigTemplate_03f078b722fdbab68539ef08c70589fe3ed9909a458b4c64e5b32896b222a99f extends \Twig\Template
 {
     public function __construct(Environment $env)
     {
@@ -228,7 +228,7 @@ class __TwigTemplate_c2787552fe7a983a5200d0473632787bcd02ed6d2393091c2078ca2d1d5
 
     public function getTemplateName()
     {
-        return "default/layout/topbar.tpl";
+        return "overrides/layout/topbar.tpl";
     }
 
     public function isTraitable()
@@ -251,6 +251,6 @@ class __TwigTemplate_c2787552fe7a983a5200d0473632787bcd02ed6d2393091c2078ca2d1d5
 
     public function getSourceContext()
     {
-        return new Source("", "default/layout/topbar.tpl", "C:\\xampp\\htdocs\\chamilo-1.11.16\\main\\template\\default\\layout\\topbar.tpl");
+        return new Source("", "overrides/layout/topbar.tpl", "C:\\xampp\\htdocs\\chamilo-1.11.16\\main\\template\\overrides\\layout\\topbar.tpl");
     }
 }

@@ -11,8 +11,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* default/layout/menu.tpl */
-class __TwigTemplate_653bbd29769b2851909479e387ea70067790d1321523db2b733af5f5e7a306fd extends \Twig\Template
+/* overrides/layout/menu.tpl */
+class __TwigTemplate_666f6940663292c7423f688df2880e9e5a0a3612175e93c7b8d8c2591b7ef13f extends \Twig\Template
 {
     public function __construct(Environment $env)
     {
@@ -51,7 +51,7 @@ class __TwigTemplate_653bbd29769b2851909479e387ea70067790d1321523db2b733af5f5e7a
 ";
         }
         // line 17
-        echo "<nav class=\"navbar navbar-default\">
+        echo "<nav class=\"navbar navbar-default navbar--fragote\">
     <div class=\"container\">
         <div class=\"navbar-header\">
             <button type=\"button\" class=\"pull-right  navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">
@@ -268,7 +268,7 @@ class __TwigTemplate_653bbd29769b2851909479e387ea70067790d1321523db2b733af5f5e7a
                 echo " ";
                 echo $this->getAttribute($context["item"], "current", []);
                 echo "\">
-                            <a href=\"";
+                            <a class=\"navbar__link--fragote\" href=\"";
                 // line 125
                 echo $this->getAttribute($context["item"], "url", []);
                 echo "\" ";
@@ -282,43 +282,54 @@ class __TwigTemplate_653bbd29769b2851909479e387ea70067790d1321523db2b733af5f5e7a
                 echo "
                             </a>
                         </li>
+                        <li class=\"";
+                // line 129
+                echo $this->getAttribute($context["item"], "key", []);
+                echo " ";
+                echo $this->getAttribute($context["item"], "current", []);
+                echo "\">
+                            ";
+                // line 130
+                echo ($context["login_language_form"] ?? null);
+                echo "
+                        </li>
                     ";
             }
-            // line 130
+            // line 133
             echo "                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 131
+        // line 134
         echo "            </ul>
             ";
-        // line 132
+        // line 135
         if ((($this->getAttribute(($context["_u"] ?? null), "logged", []) == 1) &&  !($context["user_in_anon_survey"] ?? null))) {
-            // line 133
+            // line 136
             echo "                <ul class=\"nav navbar-nav navbar-right\">
                     ";
-            // line 134
+            // line 137
             if (($context["language_form"] ?? null)) {
-                // line 135
+                // line 138
                 echo "                        <li class=\"dropdown language\">
                             ";
-                // line 136
+                // line 139
                 echo ($context["language_form"] ?? null);
                 echo "
                         </li>
                     ";
             }
-            // line 139
+            // line 142
             echo "                    ";
             if ((($context["notification_event"] ?? null) == 0)) {
-                // line 140
+                // line 143
                 echo "                        ";
                 if (($this->getAttribute(($context["_u"] ?? null), "status", []) != 6)) {
-                    // line 141
+                    // line 144
                     echo "                            <li id=\"count_message_li\" class=\"pull-left \" style=\"float: left !important;\" aria-expanded=\"true\">
                                 <a href=\"";
-                    // line 142
+                    // line 145
                     echo ($context["message_url"] ?? null);
                     echo "\">
                                     <span id=\"count_message\" class=\"badge badge-warning\"></span>
@@ -328,13 +339,13 @@ class __TwigTemplate_653bbd29769b2851909479e387ea70067790d1321523db2b733af5f5e7a
                                 <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\"
                                    aria-expanded=\"false\">
                                     <img class=\"img-circle\" src=\"";
-                    // line 149
+                    // line 152
                     echo $this->getAttribute(($context["_u"] ?? null), "avatar_small", []);
                     echo "\" alt=\"";
                     echo $this->getAttribute(($context["_u"] ?? null), "complete_name", []);
                     echo "\"/>
                                     <span class=\"username-movil\">";
-                    // line 150
+                    // line 153
                     echo $this->getAttribute(($context["_u"] ?? null), "complete_name", []);
                     echo "</span>
                                     <span class=\"caret\"></span>
@@ -343,98 +354,98 @@ class __TwigTemplate_653bbd29769b2851909479e387ea70067790d1321523db2b733af5f5e7a
                                     <li class=\"user-header\">
                                         <div class=\"text-center\">
                                             <a href=\"";
-                    // line 156
+                    // line 159
                     echo ($context["profile_url"] ?? null);
                     echo "\">
                                                 <img class=\"img-circle\" src=\"";
-                    // line 157
+                    // line 160
                     echo $this->getAttribute(($context["_u"] ?? null), "avatar_medium", []);
                     echo "\" alt=\"";
                     echo $this->getAttribute(($context["_u"] ?? null), "complete_name", []);
                     echo "\"/>
                                                 <p class=\"name\">";
-                    // line 158
+                    // line 161
                     echo $this->getAttribute(($context["_u"] ?? null), "complete_name", []);
                     echo "</p>
                                             </a>
                                             <p><em class=\"fa fa-envelope-o\" aria-hidden=\"true\"></em> ";
-                    // line 160
+                    // line 163
                     echo $this->getAttribute(($context["_u"] ?? null), "email", []);
                     echo "</p>
                                         </div>
                                     </li>
                                     <li role=\"separator\" class=\"divider\"></li>
                                     ";
-                    // line 164
+                    // line 167
                     if (($context["message_url"] ?? null)) {
-                        // line 165
+                        // line 168
                         echo "                                        <li class=\"user-body\">
                                             <a title=\"";
-                        // line 166
+                        // line 169
                         echo get_lang("Inbox");
                         echo "\" href=\"";
                         echo ($context["message_url"] ?? null);
                         echo "\">
                                                 <em class=\"fa fa-envelope\" aria-hidden=\"true\"></em> ";
-                        // line 167
+                        // line 170
                         echo get_lang("Inbox");
                         echo "
                                             </a>
                                         </li>
                                     ";
                     }
-                    // line 171
+                    // line 174
                     echo "
                                     ";
-                    // line 172
+                    // line 175
                     if (($context["pending_survey_url"] ?? null)) {
-                        // line 173
+                        // line 176
                         echo "                                        <li class=\"user-body\">
                                             <a href=\"";
-                        // line 174
+                        // line 177
                         echo ($context["pending_survey_url"] ?? null);
                         echo "\">
                                                 <em class=\"fa fa-pie-chart\"></em> ";
-                        // line 175
+                        // line 178
                         echo get_lang("PendingSurveys");
                         echo "
                                             </a>
                                         </li>
                                     ";
                     }
-                    // line 179
+                    // line 182
                     echo "
                                     ";
-                    // line 180
+                    // line 183
                     if (($context["certificate_url"] ?? null)) {
-                        // line 181
+                        // line 184
                         echo "                                        <li class=\"user-body\">
                                             <a title=\"";
-                        // line 182
+                        // line 185
                         echo get_lang("MyCertificates");
                         echo "\" href=\"";
                         echo ($context["certificate_url"] ?? null);
                         echo "\">
                                                 <em class=\"fa fa-graduation-cap\"
                                                     aria-hidden=\"true\"></em> ";
-                        // line 184
+                        // line 187
                         echo get_lang("MyCertificates");
                         echo "
                                             </a>
                                         </li>
                                     ";
                     }
-                    // line 188
+                    // line 191
                     echo "
                                     <li class=\"user-body\">
                                         <a id=\"logout_button\" title=\"";
-                    // line 190
+                    // line 193
                     echo get_lang("Logout");
                     echo "\" href=\"";
                     echo ($context["logout_link"] ?? null);
                     echo "\">
                                             <em class=\"fa fa-sign-out\"></em> ";
-                    // line 191
+                    // line 194
                     echo get_lang("Logout");
                     echo "
                                         </a>
@@ -443,25 +454,25 @@ class __TwigTemplate_653bbd29769b2851909479e387ea70067790d1321523db2b733af5f5e7a
                             </li>
                         ";
                 }
-                // line 197
+                // line 200
                 echo "                    ";
             }
-            // line 198
+            // line 201
             echo "
                     ";
-            // line 199
+            // line 202
             if ((($context["notification_event"] ?? null) == 1)) {
-                // line 200
+                // line 203
                 echo "                        ";
-                $this->loadTemplate("default/layout/notification.tpl", "default/layout/menu.tpl", 200)->display($context);
-                // line 201
+                $this->loadTemplate("default/layout/notification.tpl", "overrides/layout/menu.tpl", 203)->display($context);
+                // line 204
                 echo "                    ";
             }
-            // line 202
+            // line 205
             echo "                </ul>
             ";
         }
-        // line 204
+        // line 207
         echo "        </div><!--/.nav-collapse -->
     </div>
 </nav>";
@@ -469,7 +480,7 @@ class __TwigTemplate_653bbd29769b2851909479e387ea70067790d1321523db2b733af5f5e7a
 
     public function getTemplateName()
     {
-        return "default/layout/menu.tpl";
+        return "overrides/layout/menu.tpl";
     }
 
     public function isTraitable()
@@ -479,7 +490,7 @@ class __TwigTemplate_653bbd29769b2851909479e387ea70067790d1321523db2b733af5f5e7a
 
     public function getDebugInfo()
     {
-        return array (  465 => 204,  461 => 202,  458 => 201,  455 => 200,  453 => 199,  450 => 198,  447 => 197,  438 => 191,  432 => 190,  428 => 188,  421 => 184,  414 => 182,  411 => 181,  409 => 180,  406 => 179,  399 => 175,  395 => 174,  392 => 173,  390 => 172,  387 => 171,  380 => 167,  374 => 166,  371 => 165,  369 => 164,  362 => 160,  357 => 158,  351 => 157,  347 => 156,  338 => 150,  332 => 149,  322 => 142,  319 => 141,  316 => 140,  313 => 139,  307 => 136,  304 => 135,  302 => 134,  299 => 133,  297 => 132,  294 => 131,  288 => 130,  281 => 126,  273 => 125,  266 => 124,  264 => 123,  261 => 122,  258 => 121,  255 => 120,  252 => 119,  249 => 118,  245 => 117,  236 => 112,  233 => 111,  225 => 106,  216 => 100,  208 => 95,  199 => 89,  190 => 82,  185 => 78,  183 => 77,  174 => 71,  168 => 70,  164 => 68,  157 => 64,  150 => 62,  147 => 61,  145 => 60,  142 => 59,  135 => 55,  131 => 54,  128 => 53,  126 => 52,  123 => 51,  116 => 47,  110 => 46,  107 => 45,  105 => 44,  98 => 40,  93 => 38,  87 => 37,  83 => 36,  72 => 30,  68 => 28,  66 => 27,  54 => 17,  39 => 5,  35 => 3,  33 => 2,  30 => 1,);
+        return array (  476 => 207,  472 => 205,  469 => 204,  466 => 203,  464 => 202,  461 => 201,  458 => 200,  449 => 194,  443 => 193,  439 => 191,  432 => 187,  425 => 185,  422 => 184,  420 => 183,  417 => 182,  410 => 178,  406 => 177,  403 => 176,  401 => 175,  398 => 174,  391 => 170,  385 => 169,  382 => 168,  380 => 167,  373 => 163,  368 => 161,  362 => 160,  358 => 159,  349 => 153,  343 => 152,  333 => 145,  330 => 144,  327 => 143,  324 => 142,  318 => 139,  315 => 138,  313 => 137,  310 => 136,  308 => 135,  305 => 134,  299 => 133,  293 => 130,  287 => 129,  281 => 126,  273 => 125,  266 => 124,  264 => 123,  261 => 122,  258 => 121,  255 => 120,  252 => 119,  249 => 118,  245 => 117,  236 => 112,  233 => 111,  225 => 106,  216 => 100,  208 => 95,  199 => 89,  190 => 82,  185 => 78,  183 => 77,  174 => 71,  168 => 70,  164 => 68,  157 => 64,  150 => 62,  147 => 61,  145 => 60,  142 => 59,  135 => 55,  131 => 54,  128 => 53,  126 => 52,  123 => 51,  116 => 47,  110 => 46,  107 => 45,  105 => 44,  98 => 40,  93 => 38,  87 => 37,  83 => 36,  72 => 30,  68 => 28,  66 => 27,  54 => 17,  39 => 5,  35 => 3,  33 => 2,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -492,6 +503,6 @@ class __TwigTemplate_653bbd29769b2851909479e387ea70067790d1321523db2b733af5f5e7a
 
     public function getSourceContext()
     {
-        return new Source("", "default/layout/menu.tpl", "C:\\xampp\\htdocs\\chamilo-1.11.16\\main\\template\\default\\layout\\menu.tpl");
+        return new Source("", "overrides/layout/menu.tpl", "C:\\xampp\\htdocs\\chamilo-1.11.16\\main\\template\\overrides\\layout\\menu.tpl");
     }
 }

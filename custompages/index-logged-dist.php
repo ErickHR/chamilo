@@ -6,7 +6,7 @@
  * @package chamilo.custompages
  */
 require_once api_get_path(SYS_PATH).'main/inc/global.inc.php';
-
+echo "hola Chavito";
 $www = api_get_path('WEB_PATH');
 /**
  * Redirect.

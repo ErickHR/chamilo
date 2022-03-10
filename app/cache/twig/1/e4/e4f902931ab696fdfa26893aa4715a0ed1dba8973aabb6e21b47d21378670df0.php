@@ -36,16 +36,16 @@ class __TwigTemplate_2ddf048752cdc589e64cbf5d23fbb3396932be409d44e2fa99c0d6a905e
             if (($context["login_form"] ?? null)) {
                 // line 4
                 echo "        <div id=\"login-block\" class=\"panel panel-default\">
-            <div class=\"panel-body bg-danger\">
-            ";
+            <div class=\"panel-body\">
+            <!-- ";
                 // line 6
                 echo ($context["login_language_form"] ?? null);
-                echo "
+                echo " -->
             ";
                 // line 7
                 if ( !(null === ($context["plugin_login_top"] ?? null))) {
                     // line 8
-                    echo "                <div id=\"plugin_login_top\">
+                    echo "                <div id=\"plugin_login_top\">s
                     ";
                     // line 9
                     echo ($context["plugin_login_top"] ?? null);

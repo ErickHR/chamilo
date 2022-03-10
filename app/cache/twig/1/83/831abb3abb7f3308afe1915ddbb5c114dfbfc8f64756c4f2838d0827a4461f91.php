@@ -55,218 +55,213 @@ class __TwigTemplate_5cb632bd7ec95c851cc0c20441480ffa73ccf83dfba8412e7873bfac8d7
         }
         // line 9
         echo "    <div class=\"row\">
-        <div class=\"col-md-9 col-md-push-3 w-100 bg-success pb-4\">
-            <div class=\"layout-2-col__container\">
-                <div class=\"layout-2-col__text\">
-                    Hola Fragote
-                </div>
-            </div>
+        <div class=\"col-md-9 col-md-push-3 w-100 pb-4 layout__rigth\">
             <div class=\"page-content\">
                 ";
-        // line 17
+        // line 12
         if (($context["plugin_content_top"] ?? null)) {
-            // line 18
+            // line 13
             echo "                    <div class=\"page-content-top\">
                         ";
-            // line 19
+            // line 14
             echo ($context["plugin_content_top"] ?? null);
             echo "
                     </div>
                 ";
         }
-        // line 22
+        // line 17
         echo "
                 ";
-        // line 23
+        // line 18
         echo ($context["sniff_notification"] ?? null);
         echo "
 
                 ";
-        // line 25
+        // line 20
         $this->displayBlock('page_body', $context, $blocks);
-        // line 28
+        // line 23
         echo "
                 ";
-        // line 29
+        // line 24
         if (($context["home_welcome"] ?? null)) {
-            // line 30
+            // line 25
             echo "                    <article id=\"home-welcome\">
                         ";
-            // line 31
+            // line 26
             echo ($context["home_welcome"] ?? null);
             echo "
                     </article>
                 ";
         }
-        // line 34
+        // line 29
         echo "
                 ";
-        // line 35
+        // line 30
         if (($context["home_include"] ?? null)) {
-            // line 36
+            // line 31
             echo "                <article id=\"home-include\">
                     ";
-            // line 37
+            // line 32
             echo ($context["home_include"] ?? null);
             echo "
                 </article>
                 ";
         }
-        // line 40
+        // line 35
         echo "
 
                 ";
-        // line 42
+        // line 37
         if (($context["welcome_to_course_block"] ?? null)) {
-            // line 43
+            // line 38
             echo "                    <article id=\"homepage-course\">
                         ";
-            // line 44
+            // line 39
             echo ($context["welcome_to_course_block"] ?? null);
             echo "
                     </article>
                 ";
         }
-        // line 47
+        // line 42
         echo "
                 ";
-        // line 48
+        // line 43
         $this->displayBlock('content', $context, $blocks);
-        // line 55
+        // line 50
         echo "
                 ";
-        // line 56
+        // line 51
         if (($context["announcements_block"] ?? null)) {
-            // line 57
+            // line 52
             echo "                    <article id=\"homepage-announcements\">
                         ";
-            // line 58
+            // line 53
             echo ($context["announcements_block"] ?? null);
             echo "
                     </article>
                 ";
         }
-        // line 61
+        // line 56
         echo "
                 ";
-        // line 62
+        // line 57
         if (($context["course_category_block"] ?? null)) {
-            // line 63
+            // line 58
             echo "                    <article id=\"homepage-course-category\">
                         ";
-            // line 64
+            // line 59
             echo ($context["course_category_block"] ?? null);
             echo "
                     </article>
                 ";
         }
-        // line 67
+        // line 62
         echo "                ";
-        $this->loadTemplate(api_find_template("layout/hot_courses.tpl"), "overrides/layout/layout_2_col.tpl", 67)->display($context);
-        // line 68
+        $this->loadTemplate(api_find_template("layout/hot_courses.tpl"), "overrides/layout/layout_2_col.tpl", 62)->display($context);
+        // line 63
         echo "                ";
-        $this->loadTemplate(api_find_template("session/sessions_current.tpl"), "overrides/layout/layout_2_col.tpl", 68)->display($context);
-        // line 69
+        $this->loadTemplate(api_find_template("session/sessions_current.tpl"), "overrides/layout/layout_2_col.tpl", 63)->display($context);
+        // line 64
         echo "                ";
         if (($context["plugin_content_bottom"] ?? null)) {
-            // line 70
+            // line 65
             echo "                    <div id=\"plugin_content_bottom\">
                         ";
-            // line 71
+            // line 66
             echo ($context["plugin_content_bottom"] ?? null);
             echo "
                     </div>
                 ";
         }
-        // line 74
+        // line 69
         echo "            </div>
         </div>
-        <div class=\"col-md-3 col-md-pull-9\">
+        <div class=\"col-md-3 col-md-pull-9 layout__left\">
             <div class=\"sidebar\">
                 ";
-        // line 78
+        // line 73
         if (($context["plugin_menu_top"] ?? null)) {
-            // line 79
+            // line 74
             echo "                    ";
             echo $context["display"]->getpluginSidebar("sidebar-top", ($context["plugin_menu_top"] ?? null));
             echo "
                 ";
         }
-        // line 81
+        // line 76
         echo "
                 ";
-        // line 82
-        $this->loadTemplate(api_find_template("layout/login_form.tpl"), "overrides/layout/layout_2_col.tpl", 82)->display($context);
-        // line 83
+        // line 77
+        $this->loadTemplate(api_find_template("layout/login_form.tpl"), "overrides/layout/layout_2_col.tpl", 77)->display($context);
+        // line 78
         echo "
                 ";
-        // line 84
+        // line 79
         if ( !($context["sidebar_hide"] ?? null)) {
-            // line 85
+            // line 80
             echo "
                     ";
-            // line 86
+            // line 81
             if (($this->getAttribute(($context["_u"] ?? null), "logged", []) == 1)) {
-                // line 87
+                // line 82
                 echo "                        ";
                 echo ($context["user_image_block"] ?? null);
                 echo "
                     ";
             }
-            // line 89
+            // line 84
             echo "
                     <!-- BLOCK PROFILE -->
                     ";
-            // line 91
+            // line 86
             if (($context["profile_block"] ?? null)) {
-                // line 92
+                // line 87
                 echo "                        ";
                 echo $context["display"]->getcollapseMenu("profile", get_lang("Profile"), ($context["profile_block"] ?? null));
                 echo "
                     ";
             }
-            // line 94
+            // line 89
             echo "
                     <!-- BLOCK COURSE -->
                     ";
-            // line 96
+            // line 91
             if (($context["course_block"] ?? null)) {
-                // line 97
+                // line 92
                 echo "                        ";
                 echo $context["display"]->getcollapseMenu("courses", get_lang("Courses"), ($context["course_block"] ?? null));
                 echo "
                     ";
             }
-            // line 99
+            // line 94
             echo "
                     <!-- BLOCK SKILLS -->
                     ";
-            // line 101
+            // line 96
             if (($context["skills_block"] ?? null)) {
-                // line 102
+                // line 97
                 echo "                        ";
                 echo $context["display"]->getcollapseMenu("skills", get_lang("Skills"), ($context["skills_block"] ?? null));
                 echo "
                     ";
             }
-            // line 104
+            // line 99
             echo "
                     <!-- BLOCK WORK -->
                     ";
-            // line 106
+            // line 101
             if (($context["student_publication_block"] ?? null)) {
-                // line 107
+                // line 102
                 echo "                        ";
                 echo $context["display"]->getcollapseMenu("student_publications", get_lang("StudentPublications"), ($context["student_publication_block"] ?? null));
                 echo "
                     ";
             }
-            // line 109
+            // line 104
             echo "
                     ";
-            // line 110
+            // line 105
             if (($context["grade_book_sidebar"] ?? null)) {
-                // line 111
+                // line 106
                 echo "                        <div class=\"panel-group\" id=\"skill\" role=\"tablist\" aria-multiselectable=\"true\">
                         <div class=\"panel panel-default\" id=\"gradebook_block\">
                             <div class=\"panel-heading\" role=\"tab\">
@@ -277,7 +272,7 @@ class __TwigTemplate_5cb632bd7ec95c851cc0c20441480ffa73ccf83dfba8412e7873bfac8d7
                                        aria-expanded=\"true\"
                                        aria-controls=\"skillCollapse\">
                                         ";
-                // line 120
+                // line 115
                 echo get_lang("Gradebook");
                 echo "
                                     </a>
@@ -287,49 +282,49 @@ class __TwigTemplate_5cb632bd7ec95c851cc0c20441480ffa73ccf83dfba8412e7873bfac8d7
                                 <div class=\"panel-body\">
                                     <ul class=\"list-group\">
                                         <li class=\"list-group-item ";
-                // line 127
+                // line 122
                 echo $this->getAttribute(($context["item"] ?? null), "class", []);
                 echo "\">
                                             ";
-                // line 128
+                // line 123
                 echo get_lang("Progress");
                 echo " : ";
                 echo ($context["grade_book_progress"] ?? null);
                 echo " %
                                             <br />
                                             ";
-                // line 130
+                // line 125
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable(($context["grade_book_badge_list"] ?? null));
                 foreach ($context['_seq'] as $context["_key"] => $context["badge"]) {
-                    // line 131
+                    // line 126
                     echo "                                                <div class=\"badge_sidebar\">
                                                 ";
-                    // line 132
+                    // line 127
                     $context['_parent'] = $context;
                     $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["badge"], "skills", []));
                     foreach ($context['_seq'] as $context["_key"] => $context["skill"]) {
-                        // line 133
+                        // line 128
                         echo "                                                    ";
                         if ($this->getAttribute($context["badge"], "finished", [])) {
-                            // line 134
+                            // line 129
                             echo "                                                        <img class=\"badge_sidebar_image \" src =\"";
                             echo $this->getAttribute($context["skill"], "icon_big", []);
                             echo "\" />
                                                     ";
                         } else {
-                            // line 136
+                            // line 131
                             echo "                                                        <img class=\"badge_sidebar_image badge_sidebar_image_transparency\"
                                                              src = \"";
-                            // line 137
+                            // line 132
                             echo $this->getAttribute($context["skill"], "icon_big", []);
                             echo "\" />
                                                     ";
                         }
-                        // line 139
+                        // line 134
                         echo "                                                    <div class=\"badge_sidebar_title\">
                                                     ";
-                        // line 140
+                        // line 135
                         echo $this->getAttribute($context["skill"], "name", []);
                         echo "
                                                     </div>
@@ -338,14 +333,14 @@ class __TwigTemplate_5cb632bd7ec95c851cc0c20441480ffa73ccf83dfba8412e7873bfac8d7
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_iterated'], $context['_key'], $context['skill'], $context['_parent'], $context['loop']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 143
+                    // line 138
                     echo "                                                </div>
                                             ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['badge'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 145
+                // line 140
                 echo "                                        </li>
                                     </ul>
                                 </div>
@@ -354,71 +349,71 @@ class __TwigTemplate_5cb632bd7ec95c851cc0c20441480ffa73ccf83dfba8412e7873bfac8d7
                     </div>
                     ";
             }
-            // line 152
+            // line 147
             echo "                    ";
             echo ($context["certificates_search_block"] ?? null);
             echo "
                     <!-- BLOCK NOTICE -->
                     ";
-            // line 154
+            // line 149
             if (($context["notice_block"] ?? null)) {
-                // line 155
+                // line 150
                 echo "                        ";
                 echo $context["display"]->getcollapse("notice", get_lang("Notice"), ($context["notice_block"] ?? null));
                 echo "
                     ";
             }
-            // line 157
+            // line 152
             echo "                    <!-- BLOCK HELP -->
                     ";
-            // line 158
+            // line 153
             if (($context["help_block"] ?? null)) {
-                // line 159
+                // line 154
                 echo "                        ";
                 echo $context["display"]->getcollapse("help", get_lang("MenuGeneral"), ($context["help_block"] ?? null), true);
                 echo "
                     ";
             }
-            // line 161
+            // line 156
             echo "                    <!-- BLOCK LINKS NAVIGATION -->
                     ";
-            // line 162
+            // line 157
             if (($context["navigation_links"] ?? null)) {
-                // line 163
+                // line 158
                 echo "                        ";
                 echo $context["display"]->getcollapseFor("navigation_sidebar", get_lang("MainNavigation"), ($context["navigation_links"] ?? null));
                 echo "
                     ";
             }
-            // line 165
+            // line 160
             echo "                    ";
             echo ($context["search_block"] ?? null);
             echo "
                     ";
-            // line 166
+            // line 161
             echo ($context["classes_block"] ?? null);
             echo "
 
                     ";
-            // line 168
+            // line 163
             if (($context["plugin_menu_bottom"] ?? null)) {
-                // line 169
+                // line 164
                 echo "                        ";
                 echo $context["display"]->getpluginSidebar("sidebar-bottom", ($context["plugin_menu_bottom"] ?? null));
                 echo "
                     ";
             }
-            // line 171
+            // line 166
             echo "                ";
         }
-        // line 172
+        // line 167
         echo "            </div>
         </div>
     </div>
     ";
-        // line 175
+        // line 170
         if (($context["plugin_main_bottom"] ?? null)) {
-            // line 176
+            // line 171
             echo "        ";
             echo $context["display"]->getpluginPanel("main-bottom", ($context["plugin_main_bottom"] ?? null));
             echo "
@@ -426,34 +421,34 @@ class __TwigTemplate_5cb632bd7ec95c851cc0c20441480ffa73ccf83dfba8412e7873bfac8d7
         }
     }
 
-    // line 25
+    // line 20
     public function block_page_body($context, array $blocks = [])
     {
-        // line 26
+        // line 21
         echo "                    ";
-        $this->loadTemplate(api_find_template("layout/page_body.tpl"), "overrides/layout/layout_2_col.tpl", 26)->display($context);
-        // line 27
+        $this->loadTemplate(api_find_template("layout/page_body.tpl"), "overrides/layout/layout_2_col.tpl", 21)->display($context);
+        // line 22
         echo "                ";
     }
 
-    // line 48
+    // line 43
     public function block_content($context, array $blocks = [])
     {
-        // line 49
+        // line 44
         echo "                    ";
         if ( !(null === ($context["content"] ?? null))) {
-            // line 50
+            // line 45
             echo "                        <section id=\"page\" class=\"";
             echo ($context["course_history_page"] ?? null);
             echo "\">
                             ";
-            // line 51
+            // line 46
             echo ($context["content"] ?? null);
             echo "
                         </section>
                     ";
         }
-        // line 54
+        // line 49
         echo "                ";
     }
 
@@ -469,7 +464,7 @@ class __TwigTemplate_5cb632bd7ec95c851cc0c20441480ffa73ccf83dfba8412e7873bfac8d7
 
     public function getDebugInfo()
     {
-        return array (  457 => 54,  451 => 51,  446 => 50,  443 => 49,  440 => 48,  436 => 27,  433 => 26,  430 => 25,  422 => 176,  420 => 175,  415 => 172,  412 => 171,  406 => 169,  404 => 168,  399 => 166,  394 => 165,  388 => 163,  386 => 162,  383 => 161,  377 => 159,  375 => 158,  372 => 157,  366 => 155,  364 => 154,  358 => 152,  349 => 145,  342 => 143,  333 => 140,  330 => 139,  325 => 137,  322 => 136,  316 => 134,  313 => 133,  309 => 132,  306 => 131,  302 => 130,  295 => 128,  291 => 127,  281 => 120,  270 => 111,  268 => 110,  265 => 109,  259 => 107,  257 => 106,  253 => 104,  247 => 102,  245 => 101,  241 => 99,  235 => 97,  233 => 96,  229 => 94,  223 => 92,  221 => 91,  217 => 89,  211 => 87,  209 => 86,  206 => 85,  204 => 84,  201 => 83,  199 => 82,  196 => 81,  190 => 79,  188 => 78,  182 => 74,  176 => 71,  173 => 70,  170 => 69,  167 => 68,  164 => 67,  158 => 64,  155 => 63,  153 => 62,  150 => 61,  144 => 58,  141 => 57,  139 => 56,  136 => 55,  134 => 48,  131 => 47,  125 => 44,  122 => 43,  120 => 42,  116 => 40,  110 => 37,  107 => 36,  105 => 35,  102 => 34,  96 => 31,  93 => 30,  91 => 29,  88 => 28,  86 => 25,  81 => 23,  78 => 22,  72 => 19,  69 => 18,  67 => 17,  57 => 9,  51 => 7,  48 => 6,  45 => 5,  41 => 1,  39 => 3,  37 => 2,  31 => 1,);
+        return array (  452 => 49,  446 => 46,  441 => 45,  438 => 44,  435 => 43,  431 => 22,  428 => 21,  425 => 20,  417 => 171,  415 => 170,  410 => 167,  407 => 166,  401 => 164,  399 => 163,  394 => 161,  389 => 160,  383 => 158,  381 => 157,  378 => 156,  372 => 154,  370 => 153,  367 => 152,  361 => 150,  359 => 149,  353 => 147,  344 => 140,  337 => 138,  328 => 135,  325 => 134,  320 => 132,  317 => 131,  311 => 129,  308 => 128,  304 => 127,  301 => 126,  297 => 125,  290 => 123,  286 => 122,  276 => 115,  265 => 106,  263 => 105,  260 => 104,  254 => 102,  252 => 101,  248 => 99,  242 => 97,  240 => 96,  236 => 94,  230 => 92,  228 => 91,  224 => 89,  218 => 87,  216 => 86,  212 => 84,  206 => 82,  204 => 81,  201 => 80,  199 => 79,  196 => 78,  194 => 77,  191 => 76,  185 => 74,  183 => 73,  177 => 69,  171 => 66,  168 => 65,  165 => 64,  162 => 63,  159 => 62,  153 => 59,  150 => 58,  148 => 57,  145 => 56,  139 => 53,  136 => 52,  134 => 51,  131 => 50,  129 => 43,  126 => 42,  120 => 39,  117 => 38,  115 => 37,  111 => 35,  105 => 32,  102 => 31,  100 => 30,  97 => 29,  91 => 26,  88 => 25,  86 => 24,  83 => 23,  81 => 20,  76 => 18,  73 => 17,  67 => 14,  64 => 13,  62 => 12,  57 => 9,  51 => 7,  48 => 6,  45 => 5,  41 => 1,  39 => 3,  37 => 2,  31 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

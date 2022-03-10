@@ -11,8 +11,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* default/layout/page_header.tpl */
-class __TwigTemplate_14ebe1032187d3246d8343751b7bdd4a4904910860a80c7a1585be6fd4b80507 extends \Twig\Template
+/* overrides/layout/page_header.tpl */
+class __TwigTemplate_6a1a3eda317df8d0408ad363820ef26bf1eef88ebed071c2398a55e715063ca0 extends \Twig\Template
 {
     public function __construct(Environment $env)
     {
@@ -56,15 +56,16 @@ class __TwigTemplate_14ebe1032187d3246d8343751b7bdd4a4904910860a80c7a1585be6fd4b
         // line 12
         echo "<div class=\"container\">
     <div class=\"row\">
-        <div class=\"col-xs-12 col-md-3\">
+        <div class=\"col-xs-12 col-md-12 header__col--fragote\">
+        <!-- <div class=\"col-xs-12 col-md-3 header__col--fragote\"> -->
             ";
-        // line 15
+        // line 16
         if (($this->getAttribute(($context["_u"] ?? null), "logged", []) != 1)) {
-            // line 16
+            // line 17
             echo "                <div class=\"key-login\">
                     <a href=\"#login-block\" id=\"btn-login\" class=\"btn btn-default\">
                         <img src=\"";
-            // line 18
+            // line 19
             echo Display::get_icon_path("key.png", 22);
             echo "\" alt=\"key\"> ";
             echo get_lang("LoginAsThisUser");
@@ -73,10 +74,10 @@ class __TwigTemplate_14ebe1032187d3246d8343751b7bdd4a4904910860a80c7a1585be6fd4b
                 </div>
             ";
         }
-        // line 22
+        // line 23
         echo "            <div class=\"logo\">
                 ";
-        // line 23
+        // line 24
         echo ($context["logo"] ?? null);
         echo "
             </div>
@@ -85,67 +86,67 @@ class __TwigTemplate_14ebe1032187d3246d8343751b7bdd4a4904910860a80c7a1585be6fd4b
             <div class=\"row\">
                 <div class=\"col-sm-4\">
                     ";
-        // line 29
+        // line 30
         if ( !(null === ($context["plugin_header_left"] ?? null))) {
-            // line 30
+            // line 31
             echo "                        <div id=\"plugin_header_left\">
                             ";
-            // line 31
+            // line 32
             echo ($context["plugin_header_left"] ?? null);
             echo "
                         </div>
                     ";
         }
-        // line 34
+        // line 35
         echo "                </div>
                 <div class=\"col-sm-3\">
                     ";
-        // line 36
+        // line 37
         if ( !(null === ($context["plugin_header_center"] ?? null))) {
-            // line 37
+            // line 38
             echo "                        <div id=\"plugin_header_center\">
                             ";
-            // line 38
+            // line 39
             echo ($context["plugin_header_center"] ?? null);
             echo "
                         </div>
                     ";
         }
-        // line 41
+        // line 42
         echo "                </div>
                 <div class=\"col-sm-5\">
                     <ol class=\"header-ol\">
                         ";
-        // line 44
+        // line 45
         if ( !(null === ($context["plugin_header_right"] ?? null))) {
-            // line 45
+            // line 46
             echo "                            <li>
                                 <div id=\"plugin_header_right\">
                                     ";
-            // line 47
+            // line 48
             echo ($context["plugin_header_right"] ?? null);
             echo "
                                 </div>
                             </li>
                         ";
         }
-        // line 51
+        // line 52
         echo "                        <li>
                             <div class=\"section-notifications\">
                                 ";
-        // line 53
+        // line 54
         if ((($this->getAttribute(($context["_u"] ?? null), "logged", []) == 1) &&  !($context["user_in_anon_survey"] ?? null))) {
-            // line 54
+            // line 55
             echo "                                    <ul id=\"notifications\" class=\"nav nav-pills pull-right\">
                                     </ul>
                                 ";
         }
-        // line 57
+        // line 58
         echo "                            </div>
                         </li>
                         <li>
                             ";
-        // line 60
+        // line 61
         echo ($context["accessibility"] ?? null);
         echo "
                         </li>
@@ -157,13 +158,13 @@ class __TwigTemplate_14ebe1032187d3246d8343751b7bdd4a4904910860a80c7a1585be6fd4b
 </div>
 
 ";
-        // line 69
+        // line 70
         $this->displayBlock('menu', $context, $blocks);
-        // line 72
+        // line 73
         echo "
 ";
-        // line 73
-        $this->loadTemplate(api_find_template("layout/course_navigation.tpl"), "default/layout/page_header.tpl", 73)->display($context);
+        // line 74
+        $this->loadTemplate(api_find_template("layout/course_navigation.tpl"), "overrides/layout/page_header.tpl", 74)->display($context);
     }
 
     // line 5
@@ -171,19 +172,19 @@ class __TwigTemplate_14ebe1032187d3246d8343751b7bdd4a4904910860a80c7a1585be6fd4b
     {
         // line 6
         echo "    ";
-        $this->loadTemplate(api_find_template("layout/topbar.tpl"), "default/layout/page_header.tpl", 6)->display($context);
+        $this->loadTemplate(api_find_template("layout/topbar.tpl"), "overrides/layout/page_header.tpl", 6)->display($context);
     }
 
-    // line 69
+    // line 70
     public function block_menu($context, array $blocks = [])
     {
-        // line 70
-        $this->loadTemplate(api_find_template("layout/menu.tpl"), "default/layout/page_header.tpl", 70)->display($context);
+        // line 71
+        $this->loadTemplate(api_find_template("layout/menu.tpl"), "overrides/layout/page_header.tpl", 71)->display($context);
     }
 
     public function getTemplateName()
     {
-        return "default/layout/page_header.tpl";
+        return "overrides/layout/page_header.tpl";
     }
 
     public function isTraitable()
@@ -193,7 +194,7 @@ class __TwigTemplate_14ebe1032187d3246d8343751b7bdd4a4904910860a80c7a1585be6fd4b
 
     public function getDebugInfo()
     {
-        return array (  181 => 70,  178 => 69,  173 => 6,  170 => 5,  166 => 73,  163 => 72,  161 => 69,  149 => 60,  144 => 57,  139 => 54,  137 => 53,  133 => 51,  126 => 47,  122 => 45,  120 => 44,  115 => 41,  109 => 38,  106 => 37,  104 => 36,  100 => 34,  94 => 31,  91 => 30,  89 => 29,  80 => 23,  77 => 22,  68 => 18,  64 => 16,  62 => 15,  57 => 12,  51 => 10,  49 => 9,  46 => 8,  44 => 5,  39 => 3,  35 => 2,  32 => 1,);
+        return array (  182 => 71,  179 => 70,  174 => 6,  171 => 5,  167 => 74,  164 => 73,  162 => 70,  150 => 61,  145 => 58,  140 => 55,  138 => 54,  134 => 52,  127 => 48,  123 => 46,  121 => 45,  116 => 42,  110 => 39,  107 => 38,  105 => 37,  101 => 35,  95 => 32,  92 => 31,  90 => 30,  81 => 24,  78 => 23,  69 => 19,  65 => 17,  63 => 16,  57 => 12,  51 => 10,  49 => 9,  46 => 8,  44 => 5,  39 => 3,  35 => 2,  32 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -206,6 +207,6 @@ class __TwigTemplate_14ebe1032187d3246d8343751b7bdd4a4904910860a80c7a1585be6fd4b
 
     public function getSourceContext()
     {
-        return new Source("", "default/layout/page_header.tpl", "C:\\xampp\\htdocs\\chamilo-1.11.16\\main\\template\\default\\layout\\page_header.tpl");
+        return new Source("", "overrides/layout/page_header.tpl", "C:\\xampp\\htdocs\\chamilo-1.11.16\\main\\template\\overrides\\layout\\page_header.tpl");
     }
 }
